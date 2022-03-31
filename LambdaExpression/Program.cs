@@ -7,12 +7,18 @@ namespace LambdaExpressions
     {
         static void Main(string[] args)
         {
+
+            // args => expression syntax for a lambda expression
+            //if i rewrite this method it would look like:
+            //we also need to assign a delegate.  delegate Is a pointer or reference by a method or a group of methods. Func and Action
+            //number => number*number
+
+            Func<int, int> squarre = number => number * number;
+
+            
             Console.WriteLine(Square(5));
         }
-        static int Square(int number)
-        {
-            return number * number;
-        }
+
     }
 }
 
