@@ -13,10 +13,28 @@ namespace LambdaExpressions
             //we also need to assign a delegate.  delegate Is a pointer or reference by a method or a group of methods. Func and Action
             //number => number*number
 
-            Func<int, int> squarre = number => number * number;
 
-            
-            Console.WriteLine(Square(5));
+            //() =>...
+            // x=>...
+            // (x, y, z) =>...
+
+            //const int factor = 5;
+
+
+            //Func<int, int> multipler = n => n * factor;
+
+            //var result = multipler(10);
+
+            //Console.WriteLine(result);
+
+
+            var books = new BookRepository().GetBooks();
+            var cheapBooks = books.FindAll(b => b.Price < 10); //We read this expression like this, book goes to book.Price is less than $10.
+
+            foreach (var book in cheapBooks)
+            {
+                Console.WriteLine(book.Title);
+            }
         }
 
     }
